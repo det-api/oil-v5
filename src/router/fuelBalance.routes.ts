@@ -25,17 +25,17 @@ fuelBalanceRoute.get(
 );
 fuelBalanceRoute.post(
   "/",
-  // validateToken,
-  // roleValidator("admin"),
-  // hasAnyPermit(["add"]),
+  validateToken,
+  roleValidator("admin"),
+  hasAnyPermit(["add"]),
   addFuelBalanceHandler
 );
 
 fuelBalanceRoute.patch(
   "/",
-  // validateToken,
-  // roleValidator("admin"),
-  // hasAnyPermit(["edit"]),
+  validateToken,
+  roleValidator("admin"),
+  hasAnyPermit(["edit"]),
   updateFuelBalanceHandler
 );
 

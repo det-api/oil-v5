@@ -14,10 +14,10 @@ fuelInRoute.get("/", getFuelInHandler);
 
 fuelInRoute.post(
   "/",
-  // validateToken,
-  // roleValidator("admin"),
-  // hasAnyPermit(["add"]),
-  // validateAll(fuelInSchema),
+  validateToken,
+  roleValidator("admin"),
+  hasAnyPermit(["add"]),
+  validateAll(fuelInSchema),
   addFuelInHandler
 );
 fuelInRoute.patch(
