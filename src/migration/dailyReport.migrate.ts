@@ -7,7 +7,7 @@ const dailyReport = {
 };
 
 export const daily = () =>
-  cron.schedule("* * * * *", () => {
+  cron.schedule("0 0 * * *", () => {
     try {
       addDailyReport(dailyReport);
       console.log(new Date());
