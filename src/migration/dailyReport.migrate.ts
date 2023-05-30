@@ -7,9 +7,9 @@ const dailyReport = {
 };
 
 export const daily = () =>
-  cron.schedule("0 0 * * *", () => {
+  cron.schedule("* * * * *", async () => {
     try {
-      addDailyReport(dailyReport);
+      await addDailyReport(dailyReport);
       console.log(new Date());
     } catch (e) {
       console.log(e);

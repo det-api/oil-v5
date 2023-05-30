@@ -23,7 +23,7 @@ export const addDailyReport = async (body: dailyReportDocument | {}) => {
     console.log("create one");
     return await new dailyReportModel(body).save();
   } catch (e) {
-    console.log("e")
+    // console.log("e")
     throw new Error(e);
   }
 };

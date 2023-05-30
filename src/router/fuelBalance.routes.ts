@@ -12,8 +12,8 @@ const fuelBalanceRoute = require("express").Router();
 
 fuelBalanceRoute.get(
   "/all",
-  // validateToken,
-  // hasAnyPermit(["view"]),
+  validateToken,
+  hasAnyPermit(["view"]),
   getAllFuelBalanceHandler
 );
 
